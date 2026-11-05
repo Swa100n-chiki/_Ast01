@@ -1,0 +1,16 @@
+name: Two Steps Workflow
+ 
+on:
+  push:
+  workflow_dispatch:
+ 
+jobs:
+  two-steps:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print message
+        run: echo "Hello from GitHub Actions!"
+ 
+      - name: Check tool version
+        run: git --version
+ 
